@@ -1,0 +1,55 @@
+body {
+    background-image: url("image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+h1 {
+    color: white;
+    text-align: center
+
+}
+.dg-Clock {
+    color: white;
+    text-align: center;
+    justify-content: center;
+    margin-top: 200px;
+    display: flex;
+    height: 106px;
+    width: 100%;
+}
+.hours {
+    font-size: 40px;
+    background-color: #ae00ba;
+    height: 100px;
+    width: 100px;
+    margin: 3px;
+    
+    
+}
+.minutes {
+    font-size: 40px;
+    background-color: #ae00ba;
+    height: 100px;
+    width: 100px;
+    margin: 3px;
+}
+.seconds {
+    font-size: 40px;
+    background-color: #ae00ba;
+    height: 100px;
+    width: 100px;
+    margin: 3px;
+}
+#text {
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;  
+    width:max-content;
+    background-color: #00ba9b;
+    justify-content: center;
+}
+.ampm {
+    margin: 3px;
+}

@@ -1,0 +1,29 @@
+* {
+    margin: 10px 0 0;
+    padding: 0;
+}
+.container {
+
+    background-color: aquamarine;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+    font-size: 20px;
+
+}
+
+#loan-amount {
+   font-size: 20px;
+}
+#interest-rate {
+    font-size: 20px;
+}
+#loan-term {
+    font-size: 20px;
+}
+#calculate-button{
+    font-size: 20px;
+}

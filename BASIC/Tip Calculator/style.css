@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+
+}
+div {
+    margin: 5px;
+    padding: 2px;
+}
+
+#calculate {
+    width: auto;
+    height: auto;
+    background-color: #4CAF50;
+    justify-content: center;
+    padding: 3px;
+    margin: 3px;
+}
