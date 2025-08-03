@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Currency Converter</h2>
+        <div class="form-group">
+            <div class="form-control">
+                <label>Amount</label>
+                <span id="selectedSymbol"></span>
+                <input type="number" min="0" value="1" id="amount">
+            </div>
+            <div class="form-control">
+                <label>From</label>
+                <img id="selectedFromImg">
+                <select id="fromCountry" onchange="setCurrencySymbol(), setSelectedCountry(this,selectedFromImg)"></select>
+            </div>
+            <div class="form-control">
+                <label>&nbsp;</label>
+                <i class="fa-solid fa-right-left" onclick="rotateCurrency()"></i>
+            </div>
+            <div class="form-control">
+                <label>To</label>
+                <img id="selectedToImg">
+                <select id="toCountry" onchange="setSelectedCountry(this,selectedToImg)"></select>
+            </div>
+        </div>
+
+        <div class="form-output">
+            <button onclick="convertCurrency()">Convert</button>
+            <p id="convertedValue"></p>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
