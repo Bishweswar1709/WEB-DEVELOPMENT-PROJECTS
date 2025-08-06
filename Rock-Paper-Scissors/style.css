@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #88BDF2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container{
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 14px 14px 0 0 black;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.gameScore {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.playground {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.resultFeild {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.resultFeild i {
+    cursor: pointer;
+    font-size: 5rem;
+    color: #88BDF2;
+}
+
+.resultFeild .userSelect i {
+    transform: rotate(90deg);
+}
+
+.resultFeild .botSelect i {
+    transform: rotate(-90deg) rotateY(180deg);
+}
+
+.userSelect .fa-hand-scissors {
+    transform: rotate(0deg) rotateY(180deg)!important;
+}
+.botSelect .fa-hand-scissors {
+    transform: rotate(0deg) rotateY(0deg)!important;
+}
+
+.playOption {
+     display: flex;
+     gap: 25px;
+}
+
+.playground.start .userSelect {
+    transform-origin: right;
+    animation: userShake 0.8s ease infinite;
+}
+
+@keyframes userShake {
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+.playground.start .botSelect {
+    transform-origin: left;
+    animation: botShake 0.8s ease infinite;
+}
+@keyframes botShake {
+    50% {
+        transform: rotate(-10deg);
+    }
+}
+
+.playground.start .fa-solid,
+.playground.start .card {
+    pointer-events: none;
+}
+
+.card {
+    width: 100px;        
+    height: 100px; 
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 10px 10px 5px lightblue;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h4 {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.fa-solid {
+    font-size: 3rem;
+    color: #BDDDFC;
+    padding: 1rem 0;
+}
+
+
+.card:hover,
+.card.active {
+   background-color: black;
+}
+
+.card:hover .fa-solid,  
+.card.active .fa-solid {
+   color: #88BDF2;
+}
