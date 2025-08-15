@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f6f6f6;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.weather-input {
+    width: 25%;
+    position: fixed;
+    inset: 0;
+    background: #87CEEB;
+    padding: 1rem 2.5rem;
+    color: #333;
+}
+
+.weatherIcon {
+    background-position: 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: contain;
+    display: block;
+    height: 25%;
+    margin: 2rem auto;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.input-group input {
+    background: white;
+    text-transform: capitalize;
+    padding: 1rem;
+    font-size: 15px;
+    border-radius: 6px;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.input-group .converter {
+    position: absolute;
+    right: 45px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.input-group .fa-search {
+    position: absolute;
+    right: 15px;
+    color: rgb(177, 175, 175);
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.weather-output {
+    width: 75%;
+    position: fixed;
+    inset: 0;
+    margin-left: 25%;
+    padding: 2rem;
+    background: #f6f6f6;
+    overflow-y: auto;
+}
+
+.weather-input .feelsLike,
+.weather-input .description,
+.weather-input .date,
+.weather-input .city {
+    padding: 10px 0;
+}
+.weather-input .description {
+    text-transform: capitalize;
+}
+
+.temperature {
+    font-size: 5rem;
+    text-align: center;
+    display: flex;
+    font-weight: 300;
+}
+
+.Highlight {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-auto-flow: row;
+    gap: 1rem;
+}
+
+.Highlight div {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #add8e6;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.Highlight i {
+    font-size: 45px;
+    margin-bottom: 0.5rem;
+}
+
+.sun {
+    justify-content: space-around !important;
+}
+
+.sun span {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.uv-index i,
+.pressure i {
+    display: block;
+    margin: 0 auto;
+}
+
+.heading {
+    margin-bottom: 1rem;
+}
+
+.Forecast {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.forecast-day-card {
+    height: 220px;
+    background-color: #87CEEB;
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.forecast-day-card .day-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.forecast-day-card img {
+    width: 70px;
+    height: auto;
+}
+
+.forecast-day-card .day-condition {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4a4a4a;
+}
+
+.forecast-day-card .day-temp {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .weather-input,
+    .weather-output {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .weather-output {
+        height: auto;
+        overflow-y: visible;
+    }
+
+    .weather-input {
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .Highlight {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+
+@media (max-width: 576px) {
+    .Highlight {
+        grid-template-columns: 1fr;
+    }
+
+    .temperature {
+        font-size: 4rem;
+    }
+
+    .weather-input, .weather-output {
+        padding: 1.5rem;
+    }
+
+    h2.heading {
+        font-size: 1.5rem;
+    }
+}
